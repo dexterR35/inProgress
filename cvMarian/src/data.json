@@ -1,0 +1,35 @@
+{
+    "user": {
+      "name": "John Doe",
+      "bio": "A passionate developer from NY.",
+      "items": [
+        {
+          "id": 1,
+          "name": "Laptop",
+          "category": "Electronics"
+        },
+        {
+          "id": 2,
+          "name": "Smartphone",
+          "category": "Electronics"
+        }
+      ],
+      "cars": [
+        {
+          "brand": "Tesla",
+          "model": "Model 3",
+          "year": 2021
+        },
+        {
+          "brand": "BMW",
+          "model": "X5",
+          "year": 2020
+        }
+      ],
+      "profile": {
+        "location": "New York",
+        "occupation": "Web Developer"
+      }
+    }
+  }
+  
