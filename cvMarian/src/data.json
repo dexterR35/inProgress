@@ -1,35 +1,36 @@
 {
-    "user": {
-      "name": "John Doe",
-      "bio": "A passionate developer from NY.",
-      "items": [
-        {
-          "id": 1,
-          "name": "Laptop",
-          "category": "Electronics"
-        },
-        {
-          "id": 2,
-          "name": "Smartphone",
-          "category": "Electronics"
-        }
-      ],
-      "cars": [
-        {
-          "brand": "Tesla",
-          "model": "Model 3",
-          "year": 2021
-        },
-        {
-          "brand": "BMW",
-          "model": "X5",
-          "year": 2020
-        }
-      ],
-      "profile": {
-        "location": "New York",
-        "occupation": "Web Developer"
+  "user": {
+    "name": "Marian",
+    "lastName": "Iordache",
+    "profile": {
+      "location": "romania",
+      "city": "bucuresti",
+      "occupation": "Front End Developer",
+      "born": "21/June/1987",
+      "job": "NetBet"
+    },
+  
+    "items": {
+      "cars": {
+        "brand": "Tesla",
+        "model": "Model 3",
+        "year": 2021
+      },
+      "animals": {
+        "category": "cats",
+        "name": "Luna",
+        "born":"21/07/2020"
+      }
+    },
+    "aboutMe": {
+      "bio": {
+        "brand": "Tesla",
+        "skills": "Model 3"
+      },
+      "content": {
+        "pozitive": "Open minded, calm, clean1, organized, interested, 12345, motivated, intelligent, 12456",
+        "skills": "Luna"
       }
     }
   }
-  
+}

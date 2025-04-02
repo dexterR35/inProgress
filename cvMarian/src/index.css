@@ -1,1 +1,101 @@
 @import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+
+@font-face {
+  font-family: "firlest";
+  src: url("./assets/fonts/firlest/firlest.otf");
+}
+
+
+@font-face {
+  font-family: "farenheight";
+  src: url("./assets/fonts/farenheight/farenheight.ttf");
+}
+
+@font-face {
+  font-family: "franchise";
+  src: url("./assets/fonts/franchise/franchis1.ttf");
+}
+
+@font-face {
+  font-family: "HarryPotter";
+  src: url("./assets/fonts/harryPotter/HarryPotter.ttf");
+}
+
+@font-face {
+  font-family: "citizen";
+  src: url("./assets/fonts/citizen/citizen.ttf");
+}
+
+@font-face {
+  font-family: "news";
+  src: url("./assets/fonts/news/news.ttf");
+}
+@font-face {
+  font-family: "a23sec";
+  src: url("./assets/fonts/23sec/23sec.ttf");
+}
+@font-face {
+  font-family: "bastliga";
+  src: url("./assets/fonts/bastliga/bastliga.otf");
+}
+@theme {
+
+  --font-firlest: firlest, "sans-serif";
+  --font-farenheight: farenheight, "sans-serif";
+  --font-HarryPotter: HarryPotter, "sans-serif";
+  --font-citizen: citizen, "sans-serif";
+  --font-news: news, "sans-serif";
+  --font-a23sec: a23sec, "sans-serif";
+  --font-bastliga: bastliga, "sans-serif";
+  --font-franchise: franchise, "sans-serif";
+}
+
+@layer base {
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@layer components {
+  .bg-after {
+    position: relative;
+    z-index: 5;
+  }
+
+  .bg-after::after {
+    content: "";
+    @apply absolute top-0 left-0 right-0 bottom-0 bg-cover bg-center;
+    background-image: url("./assets/papper2.webp");
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-size: 103%;
+  }
+  .bg-after::before {
+    content: "";
+    @apply absolute top-0 left-0 right-0 bottom-0;
+    z-index: -1;
+    box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+    background: #fffef0;
+    width: 100%;
+    height: 100%;
+    background-size: 103%;
+  }
+
+  .line {
+    @apply w-full bg-gray-800;
+    height: 2px;
+  }
+ 
+ 
+}
+@layer utilities {
+    .flex {
+        @apply justify-center items-center gap-4;
+      }
+      /* .article > div p {
+        @apply whitespace-break-spaces
+      } */
+}

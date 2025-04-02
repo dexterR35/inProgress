@@ -8,9 +8,19 @@ const Component3 = () => {
   if (!userData) return <div>Loading...</div>;
 
   return (
+    <div className='flex !justify-between w-full article'>
     <div>
       <h2>Name: {userData.name}</h2>
-      <p>Bio: {userData.bio}</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, incidunt.</p>
+    </div>
+    <div>
+      <h2>Name: {userData.name}</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, incidunt.</p>
+    </div>
+    <div>
+      <h2>Name: {userData.name}</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, incidunt.</p>
+    </div>
     </div>
   );
 };
