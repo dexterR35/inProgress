@@ -1,12 +1,10 @@
 @import "tailwindcss";
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
 
-
 @font-face {
   font-family: "firlest";
   src: url("./assets/fonts/firlest/firlest.otf");
 }
-
 
 @font-face {
   font-family: "farenheight";
@@ -40,8 +38,48 @@
   font-family: "bastliga";
   src: url("./assets/fonts/bastliga/bastliga.otf");
 }
-@theme {
 
+
+
+@font-face {
+  font-family: "heart";
+  src: url("./assets/fonts/heart.otf");
+}
+@font-face {
+  font-family: "hawk2";
+  src: url("./assets/fonts/hawk2.ttf");
+}
+@font-face {
+  font-family: "hawk";
+  src: url("./assets/fonts/hawk.ttf");
+}
+
+@font-face {
+  font-family: "banaro";
+  src: url("./assets/fonts/banaro.otf");
+}
+
+@font-face {
+  font-family: "angel";
+  src: url("./assets/fonts/angel.otf");
+}
+
+@font-face {
+  font-family: "moliga";
+  src: url("./assets/fonts/moliga.otf");
+}
+@font-face {
+  font-family: "mrblack";
+  src: url("./assets/fonts/mrblack.otf");
+}
+
+@font-face {
+  font-family: "forbd";
+  src: url("./assets/fonts/forbd.ttf");
+}
+
+
+@theme {
   --font-firlest: firlest, "sans-serif";
   --font-farenheight: farenheight, "sans-serif";
   --font-HarryPotter: HarryPotter, "sans-serif";
@@ -50,6 +88,16 @@
   --font-a23sec: a23sec, "sans-serif";
   --font-bastliga: bastliga, "sans-serif";
   --font-franchise: franchise, "sans-serif";
+
+
+  --font-heart: heart, "sans-serif";
+  --font-hawk: hawk, "sans-serif";
+  --font-hawk2: hawk2, "sans-serif";
+  --font-banaro: banaro, "sans-serif";
+  --font-angel: angel, "sans-serif";
+  --font-moliga: moliga, "sans-serif";
+  --font-mrblack: mrblack, "sans-serif";
+  --font-forbd: forbd, "sans-serif";
 }
 
 @layer base {
@@ -88,14 +136,26 @@
     @apply w-full bg-gray-800;
     height: 2px;
   }
- 
- 
 }
+
 @layer utilities {
-    .flex {
-        @apply justify-center items-center gap-4;
-      }
-      /* .article > div p {
+  .flex {
+    @apply justify-center items-center gap-2 leading-none;
+  }
+  .row-start-4 .flex {
+    @apply flex-col;
+  }
+  /* .article > div p {
         @apply whitespace-break-spaces
       } */
+}
+.text-article:first-letter {
+  text-transform: uppercase;
+  initial-letter: 3;
+/* background: lightyellow; */
+border: 5px solid #000;
+font-weight: bold;
+/* padding: 0.3em; */
+border: 0;
+
 }

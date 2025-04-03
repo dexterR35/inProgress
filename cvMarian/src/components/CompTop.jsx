@@ -18,24 +18,19 @@ const CompTop = () => {
           alt="te"
           className="w-[20%] h-full mx-auto absolute object-contain"
         />
-        <div className="">
-
-        <div className="text-center grid w-full grid-flow-row grid-cols-[28%_8%_40%] translate-x-[6%] place-content-center items-center">
-          <span className="line"></span>
-          <p className="text-3xl font-firlest">The </p>
-          <span className="line"></span>
-        </div>
-
-        <p className="text-[5em] text-center mb-0 font-firlest leading-20">
-          Curriculum <span className="text-yellow-600">V</span>itae
-        </p>
-
-          <p className="text-lg font-firlest leading-0 text-center py-4 text-gray-800 ">
+        <div>
+          <div className="text-center grid w-full grid-flow-row grid-cols-[28%_8%_35%] translate-x-[6%] place-content-center items-center">
+            <span className="line"></span>
+            <p className="text-3xl font-firlest">The </p>
+            <span className="line"></span>
+          </div>
+          <p className="text-[5em] text-center mb-0 ml-20 font-firlest leading-20">
+            Curriculum <span className="text-yellow-600">V</span>itae
+          </p>
+          <p className="text-lg ml-20 -mt-2 font-firlest leading-0 text-center py-4 text-gray-800 ">
             **** of {fullName} born at {userData.profile.born}  ****
-         
           </p>
           <p className="font-bastliga text-4xl text-end w-full bg-gray-900 py-2 pr-10 text-gray-300">Hocus pocus</p>
-    
         </div>
       </div>
 
