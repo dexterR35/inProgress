@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</head>
+<body>
+    <script>
+$(document).ready(function() {
+    $("body").append(`
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                <textarea id="termsInput" rows="6" cols="50" placeholder="Paste your terms here..."></textarea>
+            </div>
+            <div style="flex: 1; margin-left: 20px;">
+                <h3>HTML Code:</h3>
+                <pre id="htmlCode" style="white-space: pre-wrap; background: #f4f4f4; padding: 10px; overflow-x: auto;"></pre>
+            </div>
+        </div>
+        <div id="output"></div>
+    `);
+
+    function convertToTerms(text) {
+        let lines = text.split("\n").filter(line => line.trim() !== "");
+        let html = "<ul>";
+
+        // Loop through each line and add as <li>
+        for (let i = 0; i < lines.length; i++) {
+            html += `<li>${lines[i].trim()}</li>`;
+        }
+
+        html += "</ul>";
+        return html;
+    }
+
+    $("#termsInput").on("input", function() {
+        let inputText = $(this).val();
+        let generatedHtml = convertToTerms(inputText);
+        $("#output").html(generatedHtml);
+        
+        // Here we format the generated HTML code to display each <li> on a new line
+        let formattedHtml = generatedHtml.replace(/<li>/g, "\n<li>").replace(/<\/li>/g, "</li>\n");
+        $("#htmlCode").text(formattedHtml); // Show formatted HTML code in pre
+    });
+});
+
+    </script>
+</body>
+</html>
